@@ -156,7 +156,7 @@
     <option v-for="i in selectGenerate" >{{i}}</option>
   </select>
   
-    <h4 v-if="stared[0]!=null">關注城市</h4>
+    <h4 v-if="stared[0]!=null">關注地區</h4>
 
     <div class="card-columns">
         <card-columns v-for="(i,key) in stared" :city="i" :key="key">
@@ -166,7 +166,7 @@
 
   <hr>
 
-  <h4>全部城市</h4>
+  <h4>全部地區</h4>
 
   <div class="card-columns">
   <card-columns v-for="(i,key) in cityFilter" :city="i" :key="key" @follow="addFollow"></card-columns>
