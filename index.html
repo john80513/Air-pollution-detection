@@ -212,9 +212,6 @@
  </script>
 
  <script>
- // API 來源
- // https://opendata.epa.gov.tw/Data/Contents/AQI/
- 
  var app = new Vue({
    el: '#app',
    data: {
@@ -225,10 +222,11 @@
   
    mounted(){
      const vm = this;
-       const api = 'https://opendata2.epa.gov.tw/AQI.json';
+       //const api = 'https://opendata2.epa.gov.tw/AQI.json';
+     const api = https://opendata.epa.gov.tw/webapi/api/rest/datastore/355000000I-000259?sort=SiteName&offset=0&limit=1000
      
        $.get(api).then(function( response ) {
-         vm.data = response;
+         vm.data = response.records;
         
        }); 
 
